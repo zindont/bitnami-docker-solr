@@ -187,7 +187,7 @@ solr_create_core() {
 
     mkdir -p "${SOLR_SERVER_DIR}/solr/${core}/data"
     mkdir -p "${SOLR_SERVER_DIR}/solr/${core}/conf"
-    cp -r "${SOLR_CORE_CONF_DIR}"/* "${SOLR_SERVER_DIR}/solr/${core}/conf/"
+    cp -r "${SOLR_CORE_CONF_DIR}"/* "${SOLR_SERVER_DIR}/solr/${core}"
 
     command_args+=("${protocol}://localhost:${SOLR_PORT_NUMBER}/solr/admin/cores?action=CREATE&name=${core}&instanceDir=${core}&dataDir=data")
 
